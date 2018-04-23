@@ -1,0 +1,9 @@
+language: java
+jdk: oraclejdk8
+
+
+install: true
+
+script: 
+  mvn --settings travis/settings.xml clean install -DskipITs=false -DskipTests=false -Dgpg.skip -Dmaven.javadoc.skip=true  -B -V
+
